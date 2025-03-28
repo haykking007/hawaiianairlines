@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { take } from 'rxjs';
-import { BasketService } from 'src/app/basket/basket.service';
 import { IProduct } from 'src/app/shared/models/product';
 import { BreadcrumbService } from 'xng-breadcrumb';
 import { StoreService } from '../store.service';
@@ -18,8 +17,7 @@ export class ProductDetailsComponent implements OnInit {
   constructor(
     private storeService: StoreService,
     private activatedRoute: ActivatedRoute,
-    private bcService: BreadcrumbService,
-    private basketService: BasketService
+    private bcService: BreadcrumbService
     ){}
 
   ngOnInit(): void {
